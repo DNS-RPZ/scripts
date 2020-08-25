@@ -16,19 +16,19 @@ git_dir="$(git rev-parse --show-toplevel)"
 ## The PyFunceble test script
 ## https://www.mypdns.org/P13
 wget -qO "${git_dir}/dns-test.sh" \
-  "https://www.mypdns.com/file/data/xncc6jx357z44smp4mwx/PHID-FILE-n47dr7m37udxsa73tpz2/pyfunceble_dns-test.sh"
+  "https://www.mypdns.org/paste/raw/13/"
   #"${SCRIPT_SOURCE_URI}/pyfunceble/dns-test.sh"
 
 ## The Recursor setup script
 ## https://www.mypdns.org/P12
 wget -qO "${git_dir}/setup_recursor.sh" \
-  "https://www.mypdns.com/file/data/2lfzn77swuxqqkbzaltw/PHID-FILE-jjh4i2gi4bfypdywu7hz/recursor_setup_recursor.sh"
+  "https://www.mypdns.org/paste/raw/12/"
   #"${SCRIPT_SOURCE_URI}/recursor/setup_recursor.sh"
 
 ## The Miniconda setup script
 ## https://www.mypdns.org/P11
 wget -qO "${git_dir}/setup_miniconda.sh" \
-  "https://www.mypdns.com/file/data/qr7i7tnze2ifuogxd7aj/PHID-FILE-m5d2unz3aq2glpleb6hc/miniconda_setup_miniconda.sh"
+  "https://www.mypdns.org/paste/raw/11/"
   #"${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh"
 
 ## Get requirements
