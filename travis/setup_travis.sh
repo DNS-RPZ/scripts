@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# https://www.mypdns.org/P14
 # Don't use loop or array for simplicity, it will allow a broader
 # ordinance to contribute.
 
@@ -14,24 +15,24 @@ git_dir="$(git rev-parse --show-toplevel)"
 
 ## The PyFunceble test script
 ## https://www.mypdns.org/P13
-wget -qO- "${git_dir}/dns-test.sh" \
+wget -qO "${git_dir}/dns-test.sh" \
   "https://www.mypdns.com/file/data/xncc6jx357z44smp4mwx/PHID-FILE-n47dr7m37udxsa73tpz2/pyfunceble_dns-test.sh"
   #"${SCRIPT_SOURCE_URI}/pyfunceble/dns-test.sh"
 
 ## The Recursor setup script
 ## https://www.mypdns.org/P12
-wget -qO- "${git_dir}/setup_recursor.sh" \
+wget -qO "${git_dir}/setup_recursor.sh" \
   "https://www.mypdns.com/file/data/mrkuy7efq4it5uupqcg7/PHID-FILE-i6n4bygwx24vy2z2kmga/recursor_setup_recursor.sh"
   #"${SCRIPT_SOURCE_URI}/recursor/setup_recursor.sh"
 
 ## The Miniconda setup script
 ## https://www.mypdns.org/P11
-wget -qO- "${git_dir}/setup_miniconda.sh" \
+wget -qO "${git_dir}/setup_miniconda.sh" \
   "https://www.mypdns.com/file/data/qr7i7tnze2ifuogxd7aj/PHID-FILE-m5d2unz3aq2glpleb6hc/miniconda_setup_miniconda.sh"
   #"${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh"
 
 ## Get requirements
-wget -qO- "${git_dir}/requirements.txt" \
+wget -qO "${git_dir}/requirements.txt" \
   "${SCRIPT_SOURCE_URI}/requirements.txt"
 
 

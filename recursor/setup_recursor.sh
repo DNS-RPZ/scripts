@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# https://www.mypdns.org/P12
 # Copyright: https://www.mypdns.org/
 # Content: https://www.mypdns.org/p/Spirillen/
 # Source: https://github.com/Import-External-Sources/pornhosts
@@ -35,11 +36,11 @@ curl "https://repo.powerdns.com/CBC8B383-pub.asc" | sudo apt-key add - && \
 # for known pirated domains
 
 rm -f "${rec_dir}/recursor.conf"
-wget -qO- '${rec_dir}/recursor.conf' \
+wget -qO '${rec_dir}/recursor.conf' \
   'https://raw.githubusercontent.com/DNS-RPZ/scripts/master/recursor/recursor.conf'
 
 rm -f "${rec_dir}/recursor.lua"
-wget -qO- '${rec_dir}/recursor.lua' \
+wget -qO '${rec_dir}/recursor.lua' \
   'https://raw.githubusercontent.com/DNS-RPZ/scripts/master/recursor/recursor.lua'
 
 # Change uid & gid to ensure the right permissions
