@@ -1,0 +1,32 @@
+dist: bionic
+
+language: generic
+
+cache:
+  pip: false
+  directories:
+  - "$HOME/db/"
+
+env:
+  global:
+  - GIT_NAME: Spirillen
+  - GIT_EMAIL: 44526987+spirillen@users.noreply.github.com
+  - TRAVIS_REPO_SLUG: "${TRAVIS_REPO_SLUG}"
+  - GIT_BRANCH: "${TRAVIS_BRANCH}"
+  - TZ: UTC
+  - PYTHON_VERSION: 3.8.5
+  - SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/DNS-RPZ/scripts/master/'
+  
+
+install:
+  # https://www.mypdns.org/P14
+  - wget -qO- "${TRAVIS_BUILD_DIR}/setup_travis.sh"
+    "https://www.mypdns.com/file/data/bn3o3eqdyczi54usbkdp/PHID-FILE-haunwrjfepa5v2azq2ur/setup_travis.sh" &&
+    chmod +x "${TRAVIS_BUILD_DIR}/setup_travis.sh"
+  - sudo bash "${TRAVIS_BUILD_DIR}/setup_travis.sh"
+
+git:
+  depth: 2
+
+script:
+  - bash "${TRAVIS_BUILD_DIR}/dns-test.sh"
