@@ -21,6 +21,12 @@ git_dir="$(git rev-parse --show-toplevel)"
 
 rec_dir="/etc/powerdns" # No trailing slash
 
+echo "rec_dir"
+echo "${rec_dir}"
+echo "List rec_dir"
+
+l "${rec_dir}"
+
 # Setup PowerDNS repos to use master releases for testing.
 printf "deb [arch=amd64] http://repo.powerdns.com/ubuntu %s-rec-master main\n" \
   "$(lsb_release -cs)" > "/etc/apt/sources.list.d/pdns.list"
@@ -36,11 +42,11 @@ curl "https://repo.powerdns.com/CBC8B383-pub.asc" | sudo apt-key add - && \
 # for known pirated domains
 
 rm -f "${rec_dir}/recursor.conf"
-wget -qO '${rec_dir}/recursor.conf' \
+wget -qO "${rec_dir}/recursor.conf" \
   'https://raw.githubusercontent.com/DNS-RPZ/scripts/master/recursor/recursor.conf'
 
 rm -f "${rec_dir}/recursor.lua"
-wget -qO '${rec_dir}/recursor.lua' \
+wget -qO "${rec_dir}/recursor.lua" \
   'https://raw.githubusercontent.com/DNS-RPZ/scripts/master/recursor/recursor.lua'
 
 # Change uid & gid to ensure the right permissions

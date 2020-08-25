@@ -13,6 +13,8 @@ git_dir="$(git rev-parse --show-toplevel)"
 
 # Get scripts
 
+echo "Downloading scrips"
+
 ## The PyFunceble test script
 ## https://www.mypdns.org/P13
 wget -qO "${git_dir}/dns-test.sh" \
@@ -37,6 +39,9 @@ wget -qO "${git_dir}/requirements.txt" \
 
 
 # Set chmod +x on scripts
+
+echo "Chmod scripts"
+
 ## The PyFunceble test script
 if [ -f "${git_dir}/dns-test.sh" ]
 then
@@ -69,9 +74,12 @@ fi
 ## Order matters!!!
 
 ### Install MiniConda
+
+echo "Running Miniconda setup"
 bash "${git_dir}/setup_miniconda.sh"
 
 ### Install the Recursor
+echo "Running Recursor setup"
 bash "${git_dir}/setup_recursor.sh"
 
 
