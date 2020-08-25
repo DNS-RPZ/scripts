@@ -5,6 +5,8 @@
 
 # This script is to install requirements for running on Travis-CI
 
+set -e #-x
+
 # Variables
 git_dir="$(git rev-parse --show-toplevel)"
 
@@ -39,7 +41,7 @@ if [ -f "${git_dir}/dns-test.sh" ]
 then
   chmod +x "${git_dir}/dns-test.sh"
 else
-	echo "The script {0} have failed to download"
+	echo "The script dns-test.sh have failed to download"
 	exit 2
 fi
 
@@ -48,7 +50,7 @@ if [ -f "${git_dir}/setup_recursor.sh" ]
 then
   chmod +x "${git_dir}/setup_recursor.sh"
 else
-	echo "The script {0} have failed to download"
+	echo "The script setup_recursor.sh have failed to download"
 	exit 2
 fi
 
@@ -57,7 +59,7 @@ if [ -f "${git_dir}/setup_miniconda.sh" ]
 then
   chmod +x "${git_dir}/setup_miniconda.sh"
 else
-	echo "The script {0} have failed to download"
+	echo "The script setup_miniconda.sh have failed to download"
 	exit 2
 fi
 
