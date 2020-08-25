@@ -22,7 +22,7 @@ wget -qO "${git_dir}/dns-test.sh" \
 ## The Recursor setup script
 ## https://www.mypdns.org/P12
 wget -qO "${git_dir}/setup_recursor.sh" \
-  "https://www.mypdns.com/file/data/mrkuy7efq4it5uupqcg7/PHID-FILE-i6n4bygwx24vy2z2kmga/recursor_setup_recursor.sh"
+  "https://www.mypdns.com/file/data/2lfzn77swuxqqkbzaltw/PHID-FILE-jjh4i2gi4bfypdywu7hz/recursor_setup_recursor.sh"
   #"${SCRIPT_SOURCE_URI}/recursor/setup_recursor.sh"
 
 ## The Miniconda setup script
