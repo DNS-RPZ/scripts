@@ -6,5 +6,5 @@ https://github.com/dns-test/script-hub
 #dns-test/script-hub
 https://github.com/Import-External-Sources/pornhosts
 https://github.com/mypdns/matrix
-matrix
-pornhosts
+mypdns/matrix
+Import-External-Sources/pornhosts
