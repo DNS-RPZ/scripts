@@ -30,8 +30,8 @@ wget -qLO "${git_dir}/setup_recursor.sh" \
   
 
 ## The Miniconda setup script
-wget -qLO "${git_dir}/setup_miniconda.sh" \
-  "${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh"
+#wget -qLO "${git_dir}/setup_miniconda.sh" \
+#  "${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh"
   #"https://www.mypdns.org/source/script-hub/browse/master/miniconda/setup_miniconda.sh?view=raw"
   
 

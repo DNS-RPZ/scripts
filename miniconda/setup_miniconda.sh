@@ -35,6 +35,8 @@ pip install --no-cache-dir -U "git+https://github.com/funilrys/${Pyfunceble_vers
 # pip install --no-cache-dir --upgrade pyfunceble-dev
 # pip install git+https://github.com/funilrys/PyFunceble.git@dev
 
+pyfunceble --version
+
 rm -f miniconda.sh
 
 ## We do not install ultimate-hosts-blacklist-whitelist(-dev) as we like

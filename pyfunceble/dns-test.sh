@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 # This script is to run PyFunceble on Travis-CI
+
+set -e
+
 echo ""
 
 echo "Success We have done the initial loads"
@@ -19,7 +22,7 @@ echo "Did it looks right?"
 echo ""
 echo "Please report any issues at"
 echo ""
-echo "'https://www.mypdns.org/maniphest/task/edit/form/1/'"
+echo "https://www.mypdns.org/maniphest/task/edit/form/1/"
 echo ""
 
 
