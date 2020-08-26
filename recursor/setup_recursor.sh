@@ -35,12 +35,6 @@ curl "https://repo.powerdns.com/CBC8B383-pub.asc" | sudo apt-key add - && \
 # Lets get rit of known deadbeats by loading the Response policy zone
 # for known pirated domains
 
-echo "rec_dir"
-echo "${rec_dir}"
-echo "List rec_dir"
-
-l "${rec_dir}"
-
 rm -f "${rec_dir}/recursor.conf"
 wget -qO "${rec_dir}/recursor.conf" \
   'https://raw.githubusercontent.com/DNS-RPZ/scripts/master/recursor/recursor.conf'
@@ -50,18 +44,23 @@ wget -qO "${rec_dir}/recursor.lua" \
   'https://raw.githubusercontent.com/DNS-RPZ/scripts/master/recursor/recursor.lua'
 
 # Change uid & gid to ensure the right permissions
-chown -R root:pdns "${rec_dir}/"
+chown root:pdns "${rec_dir}/recursor.conf"
+chown root:root "${rec_dir}/recursor.lua"
+
+# Set filepermission on recursor.conf
+chmod 640 "${rec_dir}/recursor.conf"
 
 systemctl restart pdns-recursor.service
 
-# Let the recursor load the RPZ zone before testing it
+# Allow the PowerDNS Recursor to load the RPZ zone
+# before testing it
 sleep 5
 
 # Check if the recursor is listening to port on port 5300
 if lsof -i :5300 | grep -q '^pdns_'
 then
 	printf "\n\tThe recursor is running on port 5300
-	We carry on with our test procedure"
+	We carry on with our test procedure\n"
 else
 	printf "\n\tRecursor not running, We stops here\n"
 	exit 1

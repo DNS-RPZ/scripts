@@ -11,7 +11,7 @@ set -e
 # Variables
 git_dir="$(git rev-parse --show-toplevel)"
 
-#SCRIPT_SOURCE_URI: 'https://www.mypdns.com/file/download'
+SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master/'
 
 # Get scripts
 
@@ -19,18 +19,21 @@ echo "Downloading scrips"
 
 ## The PyFunceble test script
 wget -qLO "${git_dir}/dns-test.sh" \
-  "${SCRIPT_SOURCE_URI}/z4dehwq7vszedlpntwyg/PHID-FILE-d7wx5euz4gqfkdieuikw/dns-test.sh"
-  #"${SCRIPT_SOURCE_URI}/pyfunceble/dns-test.sh"
+  "${SCRIPT_SOURCE_URI}/pyfunceble/dns-test.sh"
+  #"${SCRIPT_SOURCE_URI}/z4dehwq7vszedlpntwyg/PHID-FILE-d7wx5euz4gqfkdieuikw/dns-test.sh"
+  
 
 ## The Recursor setup script
 wget -qLO "${git_dir}/setup_recursor.sh" \
-  "https://www.mypdns.org/source/script-hub/browse/master/recursor/setup_recursor.sh?view=raw"
-  #"${SCRIPT_SOURCE_URI}/recursor/setup_recursor.sh"
+  "${SCRIPT_SOURCE_URI}/recursor/setup_recursor.sh"
+  #"https://www.mypdns.org/source/script-hub/browse/master/recursor/setup_recursor.sh?view=raw"
+  
 
 ## The Miniconda setup script
 wget -qLO "${git_dir}/setup_miniconda.sh" \
-  "https://www.mypdns.org/source/script-hub/browse/master/miniconda/setup_miniconda.sh?view=raw"
-  #"${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh"
+  "${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh"
+  #"https://www.mypdns.org/source/script-hub/browse/master/miniconda/setup_miniconda.sh?view=raw"
+  
 
 ## Get requirements
 wget -qO "${git_dir}/requirements.txt" \
