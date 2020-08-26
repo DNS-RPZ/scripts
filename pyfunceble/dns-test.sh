@@ -5,8 +5,6 @@
 set -e
 
 # Make sure the conda env is active
-export PATH="${HOME}/miniconda/bin:${PATH}"
-conda init shells bash
 source '${HOME}/miniconda/etc/profile.d/conda.sh'
 conda activate test-environment
 
