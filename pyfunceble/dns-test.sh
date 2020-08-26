@@ -1,8 +1,26 @@
 #!/usr/bin/env bash
 
 # This script is to run PyFunceble on Travis-CI
+echo ""
 
 echo "Success We have done the initial loads"
+echo "Of the dns-test script"
+echo "Lets feed it with some real test string"
+echo ""
+echo ""
+
+pyfunceble -f 'https://raw.githubusercontent.com/PyFunceble/ci_test/master/test.list' \
+  --dns 127.0.0.1:5300 -h -a --idna --mining -ex --hierarchical \
+  -db --database-type mariadb -dbr 0
+
+echo ""
+echo ""
+echo "Did it looks right?"
+echo ""
+echo "Please report any issues at"
+echo ""
+echo "'https://www.mypdns.org/maniphest/task/edit/form/1/'"
+echo ""
 
 
 
