@@ -42,6 +42,8 @@ wget -qO "${git_dir}/requirements.txt" \
 wget -qO "${git_dir}/.travis.yml" \
   "${SCRIPT_SOURCE_URI}/.travis.yml.bak"
 
+cat "${git_dir}/.travis.yml"
+
 # Set chmod +x on scripts
 
 echo "Chmod scripts"

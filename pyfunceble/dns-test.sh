@@ -20,8 +20,9 @@ echo ""
 echo ""
 
 pyfunceble -f 'https://raw.githubusercontent.com/PyFunceble/ci_test/master/test.list' \
-  --dns 127.0.0.1:5300 -h -a --idna --mining -ex --hierarchical \
-  -db --database-type mariadb -dbr 0
+  --dns 127.0.0.1:5300 -h -a --idna --mining -ex --hierarchical -m \
+  -db --database-type mariadb -dbr 0 --ci-branch "${TRAVIS_BRANCH}" \
+  --ci --autosave-minutes 15 --share-logs 
 
 echo ""
 echo ""
