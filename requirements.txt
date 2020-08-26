@@ -3,3 +3,4 @@ wheel
 https://www.mypdns.org/project/view/15/
 https://github.com/dns-test/script-hub
 script-hub
+dns-test/script-hub
