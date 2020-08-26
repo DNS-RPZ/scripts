@@ -18,13 +18,13 @@ git_dir="$(git rev-parse --show-toplevel)"
 echo "Downloading scrips"
 
 ## The PyFunceble test script
-wget -qLO "${git_dir}/dns-test.sh" \
+wget -qO "${git_dir}/dns-test.sh" \
   "${SCRIPT_SOURCE_URI}/pyfunceble/dns-test.sh"
   #"${SCRIPT_SOURCE_URI}/z4dehwq7vszedlpntwyg/PHID-FILE-d7wx5euz4gqfkdieuikw/dns-test.sh"
   
 
 ## The Recursor setup script
-wget -qLO "${git_dir}/setup_recursor.sh" \
+wget -qO "${git_dir}/setup_recursor.sh" \
   "${SCRIPT_SOURCE_URI}/recursor/setup_recursor.sh"
   #"https://www.mypdns.org/source/script-hub/browse/master/recursor/setup_recursor.sh?view=raw"
   
@@ -51,7 +51,10 @@ if [ -f "${git_dir}/dns-test.sh" ]
 then
   chmod +x "${git_dir}/dns-test.sh"
 else
+	echo ""
 	echo "The script dns-test.sh have failed to download"
+	echo "See setup_travis.sh"
+	echo ""
 	exit 2
 fi
 
@@ -60,27 +63,15 @@ if [ -f "${git_dir}/setup_recursor.sh" ]
 then
   chmod +x "${git_dir}/setup_recursor.sh"
 else
+	echo ""
 	echo "The script setup_recursor.sh have failed to download"
+	echo "See setup_travis.sh"
+	echo ""
 	exit 2
 fi
-
-## The Miniconda setup script
-if [ -f "${git_dir}/setup_miniconda.sh" ]
-then
-  chmod +x "${git_dir}/setup_miniconda.sh"
-else
-	echo "The script setup_miniconda.sh have failed to download"
-	exit 2
-fi
-
 
 # Run Scripts
 ## Order matters!!!
-
-### Install MiniConda
-
-echo "Running Miniconda setup"
-bash "${git_dir}/setup_miniconda.sh"
 
 ### Install the Recursor
 echo "Running Recursor setup"
