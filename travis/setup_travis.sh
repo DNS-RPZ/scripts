@@ -11,31 +11,30 @@ set -e #-x
 # Variables
 git_dir="$(git rev-parse --show-toplevel)"
 
+#SCRIPT_SOURCE_URI: 'https://www.mypdns.org/source/sh/browse/master'
+
 # Get scripts
 
 echo "Downloading scrips"
 
 ## The PyFunceble test script
-## https://www.mypdns.org/P13
-wget -qO "${git_dir}/dns-test.sh" \
-  "https://www.mypdns.org/paste/raw/13/"
+wget -qLO "${git_dir}/dns-test.sh" \
+  "${SCRIPT_SOURCE_URI}/pyfunceble/dns-test.sh?view=raw"
   #"${SCRIPT_SOURCE_URI}/pyfunceble/dns-test.sh"
 
 ## The Recursor setup script
-## https://www.mypdns.org/P12
-wget -qO "${git_dir}/setup_recursor.sh" \
-  "https://www.mypdns.org/paste/raw/12/"
+wget -qLO "${git_dir}/setup_recursor.sh" \
+  "${SCRIPT_SOURCE_URI}/recursor/setup_recursor.sh?view=raw"
   #"${SCRIPT_SOURCE_URI}/recursor/setup_recursor.sh"
 
 ## The Miniconda setup script
-## https://www.mypdns.org/P11
-wget -qO "${git_dir}/setup_miniconda.sh" \
-  "https://www.mypdns.org/paste/raw/11/"
+wget -qLO "${git_dir}/setup_miniconda.sh" \
+  "${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh?view=raw"
   #"${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh"
 
 ## Get requirements
 wget -qO "${git_dir}/requirements.txt" \
-  "${SCRIPT_SOURCE_URI}/requirements.txt"
+  "${SCRIPT_SOURCE_URI}/requirements.txt?view=raw"
 
 
 # Set chmod +x on scripts

@@ -1,10 +1,8 @@
 pyfunceble-dev
 wheel
+script-hub
+matrix
+pornhosts
 https://www.mypdns.org/project/view/15/
-https://github.com/dns-test/script-hub
-#script-hub
-#dns-test/script-hub
-https://github.com/Import-External-Sources/pornhosts
+https://www.mypdns.org/source/sh/repository/master/
 https://github.com/mypdns/matrix
-mypdns/matrix
-Import-External-Sources/pornhosts
