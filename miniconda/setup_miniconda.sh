@@ -29,11 +29,13 @@ source activate test-environment
 python --version --version
 pip --version
 conda --version
-pip uninstall -y pyfunceble pyfunceble-dev
+#pip uninstall -y pyfunceble pyfunceble-dev
 pip install --no-cache-dir --upgrade dnspython[dnssec,idna]
 pip install --no-cache-dir -U "git+https://github.com/funilrys/${Pyfunceble_version}"
 # pip install --no-cache-dir --upgrade pyfunceble-dev
 # pip install git+https://github.com/funilrys/PyFunceble.git@dev
+
+pyfunceble --version
 
 rm -f miniconda.sh
 
