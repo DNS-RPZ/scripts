@@ -5,7 +5,7 @@
 set -e
 
 # Make sure the conda env is active
-source activate test-environment
+conda activate test-environment
 
 echo ""
 echo ""
