@@ -4,6 +4,16 @@
 
 set -e
 
+# Make sure the conda env is active
+source activate test-environment
+
+echo ""
+echo ""
+
+pyfunceble --version
+echo ""
+echo ""
+
 echo ""
 
 echo "Success We have done the initial loads"
