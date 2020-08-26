@@ -4,10 +4,6 @@
 
 set -e
 
-# Make sure the conda env is active
-source '${HOME}/miniconda/etc/profile.d/conda.sh'
-conda activate test-environment
-
 echo ""
 echo ""
 
