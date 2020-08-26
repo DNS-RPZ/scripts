@@ -56,7 +56,7 @@ git:
   depth: 2
 
 script:
-  - bash "${TRAVIS_BUILD_DIR}/dns-test.sh"
   - truncate -s 0 "${TRAVIS_BUILD_DIR}/run_id"
   - echo "${TRAVIS_JOB_ID}" > "${TRAVIS_BUILD_DIR}/run_id"
   - cat "${TRAVIS_BUILD_DIR}/run_id"
+  - bash "${TRAVIS_BUILD_DIR}/dns-test.sh"
