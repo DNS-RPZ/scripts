@@ -40,6 +40,10 @@ wget -qO "${git_dir}/requirements.txt" \
   "https://www.mypdns.org/source/script-hub/browse/master/requirements.txt?view=raw"
 
 
+## Get .travis.yml to obtain changes
+wget -qO "${git_dir}/.travis.yml" \
+  "${SCRIPT_SOURCE_URI}/.travis.yml.bak"
+
 # Set chmod +x on scripts
 
 echo "Chmod scripts"
