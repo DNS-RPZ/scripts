@@ -11,7 +11,7 @@ set -e
 # Variables
 git_dir="$(git rev-parse --show-toplevel)"
 
-SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master/'
+#SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master/'
 
 # Get scripts
 
