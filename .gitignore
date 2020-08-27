@@ -4,3 +4,6 @@
 #setup_miniconda.sh
 #setup_travis.sh
 #requirements.txt
+
+# Miniconda
+miniconda.sh
