@@ -26,8 +26,7 @@ pyfunceble -f 'https://raw.githubusercontent.com/PyFunceble/ci_test/master/test.
   -db --database-type mariadb -dbr 0 --share-logs \
   --ci --autosave-minutes 20 --ci-branch "${TRAVIS_BRANCH}" \
   --commit-autosave-message "www.mypDNS.org Test HUB Travis Run ID ${TRAVIS_BUILD_NUMBER} [Auto Saved]" \
-  --commit-results-message "www.mypDNS.org Test HUB Travis Run ID ${TRAVIS_BUILD_NUMBER}"  \
-  --store-whois
+  --commit-results-message "www.mypDNS.org Test HUB Travis Run ID ${TRAVIS_BUILD_NUMBER}"
 
 echo ""
 echo ""
