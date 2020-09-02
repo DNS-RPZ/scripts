@@ -21,7 +21,7 @@ echo ""
 
 ## Branch @control-whois-storage specific setting `--store-whois`
 
-pyfunceble -f 'https://raw.githubusercontent.com/PyFunceble/ci_test/master/test.list' \
+pyfunceble -f 'https://raw.githubusercontent.com/mypdns/matrix/master/source/porno-sites/wildcard.list.old' \
   --dns 127.0.0.1:5300 -h -a --idna --mining -ex --hierarchical -m \
   -db --database-type mariadb -dbr 0 --share-logs \
   --ci --autosave-minutes 20 --ci-branch "${TRAVIS_BRANCH}" \
