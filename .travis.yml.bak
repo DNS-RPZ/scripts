@@ -48,7 +48,8 @@ install:
   - pip --version
   - conda --version
   #- pip install --no-cache-dir -U pyfunceble-dev
-  - pip install --no-cache-dir -U "git+https://github.com/funilrys/${Pyfunceble_version}"
+  - pip install --no-cache-dir -U pyfunceble
+  #- pip install --no-cache-dir -U "git+https://github.com/funilrys/${Pyfunceble_version}"
   - pip install --no-cache-dir -U dnspython[dnssec,idna]
   - pyfunceble --version
   - wget -O "${TRAVIS_BUILD_DIR}/setup_travis.sh"
