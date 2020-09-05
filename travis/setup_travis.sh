@@ -13,6 +13,15 @@ git_dir="$(git rev-parse --show-toplevel)"
 
 #SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master/'
 
+## Temponary code to distribute issue template start
+
+wget 'https://raw.githubusercontent.com/dns-test/domain-tester-template/master/.github/ISSUE_TEMPLATE/config.yml' \
+  -O "${git_dir}/.github/ISSUE_TEMPLATE/config.yml"
+
+git commit "${git_dir}/.github/ISSUE_TEMPLATE/config.yml" -m "issue config.yml"
+
+## Temponary code to distribute issue template end
+
 # Get scripts
 
 echo "Downloading scrips"
