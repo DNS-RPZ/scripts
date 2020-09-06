@@ -79,19 +79,6 @@ fi
 echo "Running Recursor setup"
 bash "${git_dir}/setup_recursor.sh"
 
-## Temponary code to distribute issue template start
-
-cd "${git_dir}/"
-
-mkdir -p "${git_dir}/.github/ISSUE_TEMPLATE/"
-
-wget 'https://raw.githubusercontent.com/dns-test/domain-tester-template/master/.github/ISSUE_TEMPLATE/config.yml' \
-  -O "${git_dir}/.github/ISSUE_TEMPLATE/config.yml"
-
-git add "${git_dir}/.github/ISSUE_TEMPLATE/config.yml"
-
-## Temponary code to distribute issue template end
-
 exit ${?}
 
 
