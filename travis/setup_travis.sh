@@ -15,6 +15,8 @@ git_dir="$(git rev-parse --show-toplevel)"
 
 ## Temponary code to distribute issue template start
 
+mkdir -p "${git_dir}/.github/ISSUE_TEMPLATE/"
+
 wget 'https://raw.githubusercontent.com/dns-test/domain-tester-template/master/.github/ISSUE_TEMPLATE/config.yml' \
   -O "${git_dir}/.github/ISSUE_TEMPLATE/config.yml"
 
