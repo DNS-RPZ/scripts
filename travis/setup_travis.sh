@@ -20,8 +20,6 @@ mkdir -p "${git_dir}/.github/ISSUE_TEMPLATE/"
 wget 'https://raw.githubusercontent.com/dns-test/domain-tester-template/master/.github/ISSUE_TEMPLATE/config.yml' \
   -O "${git_dir}/.github/ISSUE_TEMPLATE/config.yml"
 
-git commit "${git_dir}/.github/ISSUE_TEMPLATE/config.yml" -m "issue config.yml"
-
 ## Temponary code to distribute issue template end
 
 # Get scripts
