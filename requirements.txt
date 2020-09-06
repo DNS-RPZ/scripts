@@ -1,4 +1,4 @@
-pyfunceble-dev >= 3.2.12
+pyfunceble-dev >= 3.3.1
 wheel
 script-hub
 matrix
