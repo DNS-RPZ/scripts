@@ -6,7 +6,7 @@
 
 # This script is to install requirements for running on Travis-CI
 
-set -e
+set -e -x
 
 # Variables
 git_dir="$(git rev-parse --show-toplevel)"
