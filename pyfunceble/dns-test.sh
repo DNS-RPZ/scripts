@@ -24,7 +24,7 @@ echo ""
 pyfunceble -f 'https://raw.githubusercontent.com/mypdns/matrix/master/source/porno-sites/wildcard.list.old' \
   --dns 127.0.0.1:5300 -h -a --idna --mining -ex --hierarchical -m \
   -db --database-type mariadb -dbr 0 --share-logs \
-  --ci --autosave-minutes 20 --ci-branch "${TRAVIS_BRANCH}" \
+  --ci --autosave-minutes 5 --ci-branch "${TRAVIS_BRANCH}" \
   --commit-autosave-message "www.mypDNS.org Test HUB Travis Run ID ${TRAVIS_BUILD_NUMBER} [Auto Saved]" \
   --commit-results-message "www.mypDNS.org Test HUB Travis Run ID ${TRAVIS_BUILD_NUMBER}"
 
