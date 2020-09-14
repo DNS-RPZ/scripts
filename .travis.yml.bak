@@ -1,5 +1,5 @@
-dist: bionic
-
+os: linux
+dist: focal
 language: generic
 
 cache:
@@ -30,9 +30,12 @@ env:
   - PYFUNCEBLE_DB_PASSWORD="${DB_PASSWORD}"
   - PYFUNCEBLE_DB_PORT="${DB_PORT}"
 
-# We needs the mariadb client...
-#addons:
-#  mariadb: '10.5'
+# We might needs the mariadb client...
+addons:
+  #mariadb: '10.5'
+  update: true
+  sources:
+    - sourceline: 'ppa:git-core/ppa'
 
 install:
   - export PATH="${HOME}/miniconda/bin:${PATH}"
