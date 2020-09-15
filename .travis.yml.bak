@@ -1,6 +1,7 @@
 os: linux
 dist: focal
 language: generic
+name: "DNS record testing for https://www.mypdns.org"
 
 cache:
   pip: false
@@ -19,7 +20,7 @@ env:
   #- PYFUNCEBLE_DEBUG: true
   #- PYFUNCEBLE_DEBUG_ON_SCREEN: true
   #- Pyfunceble_version: 'PyFunceble'
-  - Pyfunceble_version: 'PyFunceble@dev'
+  - Pyfunceble_version: 'PyFuncebl-@dev'
   - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_OUTPUT_LOCATION: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_AUTO_CONFIGURATION: yes
@@ -32,10 +33,12 @@ env:
 
 # We might needs the mariadb client...
 addons:
-  #mariadb: '10.5'
   update: true
   sources:
     - sourceline: 'ppa:git-core/ppa'
+    - sourceline: 'deb [arch=amd64] http://repo.powerdns.com/ubuntu focal-rec-master main'
+      key_url: 'https://repo.powerdns.com/CBC8B383-pub.asc'
+  #mariadb: '10.5'
 
 install:
   - export PATH="${HOME}/miniconda/bin:${PATH}"
@@ -50,8 +53,7 @@ install:
   - python --version --version
   - pip --version
   - conda --version
-  - pip install --no-cache-dir -U pyfunceble-dev
-  #- pip install --no-cache-dir -U pyfunceble
+  - pip install --no-cache-dir -U ${Pyfunceble_version}
   #- pip install --no-cache-dir -U "git+https://github.com/funilrys/${Pyfunceble_version}"
   - pip install --no-cache-dir -U dnspython[dnssec,idna]
   - pyfunceble --version
