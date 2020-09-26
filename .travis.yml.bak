@@ -20,7 +20,7 @@ env:
   #- PYFUNCEBLE_DEBUG: true
   #- PYFUNCEBLE_DEBUG_ON_SCREEN: true
   #- Pyfunceble_version: 'PyFunceble'
-  - Pyfunceble_version: 'PyFuncebl-dev'
+  - Pyfunceble_version: 'pyfunceble-dev'
   - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_OUTPUT_LOCATION: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_AUTO_CONFIGURATION: yes
