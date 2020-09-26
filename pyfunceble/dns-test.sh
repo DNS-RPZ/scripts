@@ -22,7 +22,7 @@ echo ""
 ## Branch @control-whois-storage specific setting `--store-whois`
 
 pyfunceble -f 'https://raw.githubusercontent.com/mypdns/matrix/master/source/porno-sites/wildcard.list.old' \
-  --dns 127.0.0.1:5300 -h -a --idna --nf -ex --hierarchical -m \
+  --dns 127.0.0.1:5300 -h -a --idna -nf -ex --hierarchical -m \
   -db --database-type mariadb -dbr 0 --share-logs --dots --complements \
   --ci -q --autosave-minutes 25 --ci-branch "${TRAVIS_BRANCH}" \
   --commit-autosave-message "www.mypDNS.org Test HUB Travis Run ID ${TRAVIS_BUILD_NUMBER} [Auto Saved]" \
