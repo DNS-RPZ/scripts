@@ -20,7 +20,7 @@ env:
   #- PYFUNCEBLE_DEBUG: true
   #- PYFUNCEBLE_DEBUG_ON_SCREEN: true
   #- Pyfunceble_version: 'PyFunceble'
-  - Pyfunceble_version: 'pyfunceble-dev'
+  - Pyfunceble_version: 'pyfunceble-dev==3.2.2'
   - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_OUTPUT_LOCATION: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_AUTO_CONFIGURATION: yes
@@ -53,7 +53,7 @@ install:
   - python --version --version
   - pip --version
   - conda --version
-  - pip install --no-cache-dir -U pyfunceble-dev
+  - pip install --no-cache-dir -U ${Pyfunceble_version}
   #- pip install --no-cache-dir -U "git+https://github.com/funilrys/${Pyfunceble_version}"
   - pip install --no-cache-dir -U dnspython[dnssec,idna]
   - pyfunceble --version
