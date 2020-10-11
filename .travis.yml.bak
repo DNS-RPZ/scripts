@@ -1,5 +1,5 @@
 os: linux
-dist: focal
+dist: bionic #focal
 language: generic
 name: "DNS record testing for https://www.mypdns.org"
 
