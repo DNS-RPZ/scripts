@@ -15,12 +15,12 @@ env:
   - TRAVIS_REPO_SLUG: "${TRAVIS_REPO_SLUG}"
   - GIT_BRANCH: "${TRAVIS_BRANCH}"
   - TZ: UTC
-  - PYTHON_VERSION: 3.8.5
+  - PYTHON_VERSION: 3.9.0
   - SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master'
   #- PYFUNCEBLE_DEBUG: true
   #- PYFUNCEBLE_DEBUG_ON_SCREEN: true
   #- Pyfunceble_version: 'PyFunceble'
-  - Pyfunceble_version: 'pyfunceble-dev==3.2.2'
+  - Pyfunceble_version: 'pyfunceble-dev'
   - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_OUTPUT_LOCATION: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_AUTO_CONFIGURATION: yes
