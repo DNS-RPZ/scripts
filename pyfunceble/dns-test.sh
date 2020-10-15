@@ -27,7 +27,8 @@ pyfunceble -f 'https://raw.githubusercontent.com/mypdns/matrix/master/source/por
   --ci --autosave-minutes 5 --ci-branch "${TRAVIS_BRANCH}" \
   --commit-autosave-message "www.mypDNS.org Test HUB Travis Run ID ${TRAVIS_BUILD_NUMBER} [Auto Saved]" \
   --commit-results-message "www.mypDNS.org Test HUB Travis Run ID ${TRAVIS_BUILD_NUMBER}"
-  --cmd "'echo "${TRAVIS_JOB_ID}" > "${TRAVIS_BUILD_DIR}/run_id"'"
+  --cmd "'echo "${TRAVIS_JOB_ID}" > "${TRAVIS_BUILD_DIR}/run_id"'" \
+  -dbc 365
 
 echo ""
 echo ""
