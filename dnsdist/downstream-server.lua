@@ -303,6 +303,7 @@ newServer({
         }
 )
 
+--[[ DNS Server down
 newServer({
         address="205.204.88.60",
         name="BlockAid Public DNS",
@@ -332,7 +333,9 @@ newServer({
         retries=3
         }
 )
+]]
 
+--[[ DNS Server down
 newServer({
         address="209.59.210.167",
         name="Christoph Hochsttter",
@@ -362,7 +365,9 @@ newServer({
         retries=3
         }
 )
+]]
 
+--[[ DNS Server down
 newServer({
         address="212.82.225.7",
         name="ClaraNet",
@@ -392,6 +397,7 @@ newServer({
         retries=3
         }
 )
+]]
 
 newServer({
         address="84.200.69.80",
@@ -423,6 +429,7 @@ newServer({
         }
 )
 
+--[[ DNS Server down
 newServer({
         address="104.236.210.29",
         name="DNSReactor",
@@ -452,6 +459,7 @@ newServer({
         retries=3
         }
 )
+]]
 
 newServer({
         address="216.146.35.35",
@@ -498,6 +506,7 @@ newServer({
         }
 )
 
+--[[ DNS Server down
 newServer({
         address="85.214.73.63",
         name="FoeBud",
@@ -512,7 +521,9 @@ newServer({
         retries=3
         }
 )
+]]
 
+--[[ DNS Server down
 newServer({
         address="87.118.111.215",
         name="FoolDNS",
@@ -542,6 +553,7 @@ newServer({
         retries=3
         }
 )
+]]
 
 newServer({
         address="37.235.1.174",
@@ -595,7 +607,7 @@ newServer({
         weight="100",
         pool={'ci-test'},
         checkType="A",
-        checkName="www.mypdns.org",
+        checkName="ns1.dns.mypdns.org",
         mustResolve=true,
         tcpRecvTimeout=5,
         tcpSendTimeout=5,
@@ -603,6 +615,7 @@ newServer({
         }
 )
 
+--[[ DNS Server down
 newServer({
         address="87.118.100.175",
         name="German Privacy Foundation e.V.",
@@ -662,7 +675,9 @@ newServer({
         retries=3
         }
 )
+]]
 
+--[[ DNS Server down
 newServer({
         address="81.218.119.11",
         name="GreenTeamDNS",
@@ -692,6 +707,7 @@ newServer({
         retries=3
         }
 )
+]]
 
 newServer({
         address="74.82.42.42",
@@ -738,6 +754,7 @@ newServer({
         }
 )
 
+--[[ DNS Server down
 newServer({
         address="156.154.70.1",
         name="Neustar DNS Advantage",
@@ -767,7 +784,9 @@ newServer({
         retries=3
         }
 )
+]]
 
+--[[ DNS Server down
 newServer({
         address="5.45.96.220",
         name="New Nations",
@@ -797,6 +816,7 @@ newServer({
         retries=3
         }
 )
+]]
 
 newServer({
         address="198.153.192.1",
@@ -828,6 +848,7 @@ newServer({
         }
 )
 
+--[[ DNS Server down
 newServer({
         address="58.6.115.42",
         name="OpenNIC",
@@ -1022,7 +1043,9 @@ newServer({
         retries=3
         }
 )
+]]
 
+--[[ DNS Server down
 newServer({
         address="194.145.226.26",
         name="PowerNS",
@@ -1052,6 +1075,7 @@ newServer({
         retries=3
         }
 )
+]]
 
 newServer({
         address="195.46.39.39",
@@ -1098,6 +1122,7 @@ newServer({
         }
 )
 
+--[[ DNS Server down
 newServer({
         address="208.76.50.50",
         name="SmartViper Public DNS",
@@ -1127,66 +1152,7 @@ newServer({
         retries=3
         }
 )
-
-newServer({
-        address="78.46.89.147",
-        name="ValiDOM",
-        order=200,
-        weight="100",
-        pool={'ci-test'},
-        checkType="A",
-        checkName="www.mypdns.org",
-        mustResolve=true,
-        tcpRecvTimeout=5,
-        tcpSendTimeout=5,
-        retries=3
-        }
-)
-
-newServer({
-        address="88.198.75.145",
-        name="ValiDOM",
-        order=200,
-        weight="100",
-        pool={'ci-test'},
-        checkType="A",
-        checkName="www.mypdns.org",
-        mustResolve=true,
-        tcpRecvTimeout=5,
-        tcpSendTimeout=5,
-        retries=3
-        }
-)
-
-newServer({
-        address="77.109.148.136",
-        name="Xiala.net",
-        order=200,
-        weight="100",
-        pool={'ci-test'},
-        checkType="A",
-        checkName="www.mypdns.org",
-        mustResolve=true,
-        tcpRecvTimeout=5,
-        tcpSendTimeout=5,
-        retries=3
-        }
-)
-
-newServer({
-        address="77.109.148.137",
-        name="Xiala.net",
-        order=200,
-        weight="100",
-        pool={'ci-test'},
-        checkType="A",
-        checkName="www.mypdns.org",
-        mustResolve=true,
-        tcpRecvTimeout=5,
-        tcpSendTimeout=5,
-        retries=3
-        }
-)
+]]
 
 newServer({
         address="77.88.8.88",
@@ -1233,6 +1199,7 @@ newServer({
         }
 )
 
+--[[ Apperantly only active for DOH
 newServer({
         address="136.144.215.158",
         name="doh.powerdns.org",
@@ -1247,4 +1214,4 @@ newServer({
         retries=3
         }
 )
-
+]]
