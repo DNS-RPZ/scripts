@@ -18,7 +18,7 @@ env:
   - PYTHON_VERSION: 3.9.1
   - SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master'
   - PYFUNCEBLE_DEBUG: false
-  - PYFUNCEBLE_DEBUG_ON_SCREEN: false
+  #- PYFUNCEBLE_DEBUG_ON_SCREEN: false
   #- Pyfunceble_version: 'PyFunceble'
   - Pyfunceble_version: '4.0.0-dev'
   - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
