@@ -15,12 +15,12 @@ env:
   - TRAVIS_REPO_SLUG: "${TRAVIS_REPO_SLUG}"
   - GIT_BRANCH: "${TRAVIS_BRANCH}"
   - TZ: UTC
-  - PYTHON_VERSION: 3.9.0
+  - PYTHON_VERSION: 3.9.1
   - SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master'
-  #- PYFUNCEBLE_DEBUG: true
-  #- PYFUNCEBLE_DEBUG_ON_SCREEN: true
+  - PYFUNCEBLE_DEBUG: false
+  - PYFUNCEBLE_DEBUG_ON_SCREEN: false
   #- Pyfunceble_version: 'PyFunceble'
-  - Pyfunceble_version: 'pyfunceble-dev'
+  - Pyfunceble_version: '4.0.0-dev'
   - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_OUTPUT_LOCATION: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_AUTO_CONFIGURATION: yes
@@ -53,9 +53,9 @@ install:
   - python --version --version
   - pip --version
   - conda --version
-  - pip install --no-cache-dir -U ${Pyfunceble_version}
-  #- pip install --no-cache-dir -U "git+https://github.com/funilrys/${Pyfunceble_version}"
-  - pip install --no-cache-dir -U dnspython[dnssec,idna]
+  #- pip install --no-cache-dir -U ${Pyfunceble_version}
+  - pip install --no-cache-dir -U "git+https://github.com/funilrys/PyFunceble@${Pyfunceble_version}"
+  #- pip install --no-cache-dir -U dnspython[dnssec,idna]
   - pyfunceble --version
   - wget -O "${TRAVIS_BUILD_DIR}/setup_travis.sh"
     "${SCRIPT_SOURCE_URI}/travis/setup_travis.sh" &&
