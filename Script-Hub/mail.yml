@@ -1,0 +1,67 @@
+name: Ci script for PyFunceble thin clients # https://www.mypdns.org/tag/pyfunceble_-_cluster_-_clients/
+on:
+  push:
+    branches:
+      - "master"
+  schedule:
+    - cron: "48 * * * *"
+
+env:
+  GIT_NAME: "${{ secrets.GIT_BOT_NAME }}"
+  GIT_EMAIL: "${{ secrets.GIT_BOT_EMAIL }}"
+  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+  BUILD_NUMBER: "${{ github.run_number }}"
+  PYFUNCEBLE_AUTO_CONFIGURATION: "YES"
+  PYFUNCEBLE_DB_CHARSET: "${{ secrets.MYPDNS_DB_CHAR }}"
+  PYFUNCEBLE_DB_HOST: "${{ secrets.MYPDNS_DB_HOST }}"
+  PYFUNCEBLE_DB_NAME: "${{ secrets.MYPDNS_DB_NAME }}"
+  PYFUNCEBLE_DB_USERNAME: "${{ secrets.MYPDNS_DB_USER }}"
+  PYFUNCEBLE_DB_PASSWORD: "${{ secrets.MYPDNS_DB_PASS }}"
+  PYFUNCEBLE_DB_PORT: "${{ secrets.MYPDNS_DB_PORT }}"
+  PYFUNCEBLE_CONFIG_DIR: "${{ github.workspace }}/.pyfunceble"
+  PYFUNCEBLE_OUTPUT_LOCATION: "${{ github.workspace }}/.pyfunceble"
+  PYFUNCEBLE_DEBUG: true
+  PYFUNCEBLE_LOGGING_LVL: critical
+  PYFUNCEBLE_DEBUG_ON_SCREEN: false
+
+jobs:
+  test_and_push:
+    name: Run PyFunceble against the files and push result to repository
+    runs-on: "${{ matrix.os }}"
+
+    strategy:
+      fail-fast: false
+      matrix:
+          python_version:
+            - "3.9.1"
+          os:
+            - ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Clone repository
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python ${{ matrix.python_version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python_version }}
+
+      - name: Install dependencies
+        run: |
+          sudo bash "${{ github.workspace }}/Script-Hub/dependencies.sh"
+
+      - name: Install PyFunceble
+        run: |
+          pip install --no-cache-dir --pre PyFunceble-dev
+
+      - name: Get PyFunceble version
+        run: |
+          PyFunceble --version
+
+      - name: Run Data testing
+        run: |
+          pyfunceble --ci \
+          --ci-end-command "bash ${{ github.workspace }}/dev-tools/FinalCommit.sh" \
+          -f "${{ github.workspace }}/PULL_REQUESTS/domains.txt"

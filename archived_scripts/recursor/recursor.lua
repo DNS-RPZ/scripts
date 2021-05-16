@@ -3,7 +3,7 @@
 -- running rootkeys.lua too.
 dofile("/usr/share/pdns-recursor/lua-config/rootkeys.lua")
 
-rpzMaster(
+rpzPrimary(
 	{"195.201.225.97:5306", "95.216.166.138:5306"},
 	"pirated.mypdns.cloud",
 	{refresh="120",

@@ -5,28 +5,27 @@
 
 version: 2
 updates:
-  - package-ecosystem: "github-actions" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'github-actions' # See documentation for possible values
+    directory: '/' # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: 'daily'
 
-  - package-ecosystem: "pyfunceble@raw2sqlalchemy" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'pyfunceble@raw2sqlalchemy' # See documentation for possible values
+    directory: '/' # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: 'daily'
     allow:
-      - dependency-type: "all"
+      - dependency-type: 'all'
     commit-message:
-      prefix: "PyFunceble"
-      include: "scope"
+      prefix: 'PyFunceble'
+      include: 'scope'
 
-  - package-ecosystem: "script-hub" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'script-hub' # See documentation for possible values
+    directory: '/' # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: 'daily'
 
-
-  - package-ecosystem: "github-actions" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'github-actions' # See documentation for possible values
+    directory: '/' # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: 'daily'
