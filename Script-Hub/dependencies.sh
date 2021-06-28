@@ -20,7 +20,7 @@ apt-fast -y purge mysql*
 apt-fast -i -y curl ca-certificates apt-transport-https
 
 # Installing MariaDB connector
-curl -LsS https://www.mypdns.org/u/MariaDBconnector | \
+curl -LsS https://archive.mypdns.org/u/MariaDBconnector | \
     sudo bash -s --skip-maxscale
 
 # Install the MariaDB packages we needs. We use force to ensure replacement
