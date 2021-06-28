@@ -5,7 +5,7 @@
 export DEBIAN_FRONTEND=noninteractive
 
 # Let's install apt-fast
-/bin/bash -c "$(curl -sL https://www.mypdns.org/u/aptfastinstallscript)"
+/bin/bash -c "$(curl -sL https://archive.mypdns.org/u/aptfastinstallscript)"
 
 # Let's update the CI
 apt-fast -y update && apt-fast -y upgrade
